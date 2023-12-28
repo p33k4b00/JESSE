@@ -1,0 +1,92 @@
+body, html {
+    font-family: 'Noto Sans Mono', monospace;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+#background-video {
+    filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+#video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.739); /* 30% white overlay */
+    z-index: -1;
+}
+
+header, main, footer {
+    text-align: center; /* Center text horizontally */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically for flex containers */
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    z-index: 2;
+}
+
+main {
+    flex-grow: 1;
+    z-index: 1;
+}
+
+footer {
+    color: grey;
+    padding: 0.5rem;
+}
+
+h1, .intro, .why-choose, .contract-address {
+    margin: 0;
+    padding: 1rem;
+}
+
+p {
+    width: 500px; /* Set the width of paragraph elements */
+    margin: auto; /* Center the paragraph if the parent is wider than 500px */
+    /* Optional: Add more styling as needed */
+}
+
+
+ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+}
+
+a {
+    color: #007bff;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Additional Media Query for Video Responsiveness */
+@media screen and (max-width: 600px) {
+    #background-video {
+        height: auto;
+    }
+
+    body {
+        font-size: 14px;
+    }
+}
